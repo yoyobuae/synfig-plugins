@@ -1,0 +1,2004 @@
+<?xml version="1.0"?>
+<canvas version="0.9" width="480" height="270" xres="2834.645752" yres="2834.645752" view-box="-4.000000 2.250000 4.000000 -2.250000" antialias="1" fps="24.000" begin-time="0f" end-time="2s" bgcolor="0.500000 0.500000 0.500000 1.000000">
+  <name>Synfig Animation 1</name>
+  <keyframe time="0f" active="true"/>
+  <keyframe time="12f" active="true"/>
+  <keyframe time="1s" active="true"/>
+  <keyframe time="1s 12f" active="true"/>
+  <keyframe time="2s" active="true"> (Duplicate)</keyframe>
+  <defs>
+    <real value="-2.7500000000" id="window_left"/>
+    <real value="-1.2500000000" id="window_bottom"/>
+    <real value="3.2500000000" id="window_right"/>
+    <real value="1.2500000000" id="window_top"/>
+    <add type="real" lhs="window_bottom" rhs="window_top" id="window_mid_y" guid="29CB95F4330BA6A824671657A01B39CC">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <composite type="vector" x="window_left" y="window_bottom" id="window_botleft" guid="FF4D652F4C80605B1CD7F72923C2BB78"/>
+    <composite type="vector" x="window_right" y="window_top" id="window_topright" guid="16DEAAF73BA513BE69E9A0D2E8A6B7E3"/>
+    <composite type="vector" x="window_left" y="window_mid_y" id="window_midleft" guid="23E4B31D835ACD41BF824FAB8F1C178E"/>
+    <composite type="vector" x="window_right" y="window_mid_y" id="window_midright"/>
+    <subtract type="real" lhs="window_right" rhs="window_left" id="window_span_x" guid="DE55556972F2FBC2B78D52F23DEB644F">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <reciprocal type="real" link="window_span_x" id="window_span_x_reciprocal" guid="C1F167D1D5AFE3CC7EAE0A832A1486B1">
+      <epsilon>
+        <real value="0.0000010000"/>
+      </epsilon>
+      <infinite>
+        <real value="999999.0000000000"/>
+      </infinite>
+    </reciprocal>
+    <vector id="P2">
+      <x>3.2500000000</x>
+      <y>0.0000000000</y>
+    </vector>
+    <animated type="vector" id="P1" guid="B0099ADE5022B768545CFCC52085F824">
+      <waypoint time="0s" before="auto" after="auto">
+        <vector guid="5703BC1198D9FBF7074CFFB64B333E9D">
+          <x>0.0000000000</x>
+          <y>0.0000000000</y>
+        </vector>
+      </waypoint>
+      <waypoint time="0.5s" before="auto" after="auto">
+        <vector guid="CDC50E90A76E47A3C8297BD0D49CB1AB">
+          <x>0.0000000000</x>
+          <y>1.7500000000</y>
+        </vector>
+      </waypoint>
+      <waypoint time="1s" before="auto" after="auto">
+        <vector guid="0939415FF6078D44D3FE5BF88413FA60">
+          <x>0.0000000000</x>
+          <y>0.0000000000</y>
+        </vector>
+      </waypoint>
+      <waypoint time="1.5s" before="auto" after="auto">
+        <vector guid="EE6D529354A527DD3069F4CC8C24F095">
+          <x>0.0000000000</x>
+          <y>-1.7500000000</y>
+        </vector>
+      </waypoint>
+      <waypoint time="2s" before="auto" after="auto">
+        <vector guid="5703BC1198D9FBF7074CFFB64B333E9D">
+          <x>0.0000000000</x>
+          <y>0.0000000000</y>
+        </vector>
+      </waypoint>
+    </animated>
+    <vector id="P0">
+      <x>-2.7500000000</x>
+      <y>0.0000000000</y>
+    </vector>
+    <subtract type="vector" lhs="P1" rhs="P0" id="P1_minus_P0" guid="A8FADC3C9A4C49B8FCDBFA7FE955440B">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="P2" rhs="P1" id="P2_minus_P1" guid="4414088228B504ED6ABCD5034DF98920">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <vectorlength type="real" vector="P1_minus_P0" id="P1_minus_P0_length" guid="C6A85CD64332A23FF5EB88F7B2291670"/>
+    <vectorlength type="real" vector="P2_minus_P1" id="P2_minus_P1_length" guid="1314A6F76A09AF1E1750372FCA915857"/>
+    <reciprocal type="real" link="P1_minus_P0_length" id="P1_minus_P0_length_reciprocal" guid="8A6AAA8BC4DEC49CAA56C15B3938537C">
+      <epsilon>
+        <real value="0.0000010000"/>
+      </epsilon>
+      <infinite>
+        <real value="999999.0000000000"/>
+      </infinite>
+    </reciprocal>
+    <reciprocal type="real" link="P2_minus_P1_length" id="P2_minus_P1_length_reciprocal" guid="3472900BC432C2BFAFA148ED53B5A548">
+      <epsilon>
+        <real value="0.0000010000"/>
+      </epsilon>
+      <infinite>
+        <real value="999999.0000000000"/>
+      </infinite>
+    </reciprocal>
+    <scale type="vector" link="P1_minus_P0" scalar="P1_minus_P0_length_reciprocal" id="segment01_i" guid="1131CF4D1A3C3FBE7384C7735B14061F"/>
+    <scale type="vector" link="P2_minus_P1" scalar="P2_minus_P1_length_reciprocal" id="segment12_i" guid="5D8645134E1AC90BE622DDFF236E83D3"/>
+    <vectorx type="real" vector="segment01_i" id="segment01_i_vectorx" guid="C3D83855EFDC182E26D74FC243144615"/>
+    <vectory type="real" vector="segment01_i" id="segment01_i_vectory" guid="12B3C7A718F465E6D711FADDCBA7EFBA"/>
+    <vectorx type="real" vector="segment12_i" id="segment12_i_vectorx" guid="AE5C8A1770195ACDC8D621667ABF5B49"/>
+    <vectory type="real" vector="segment12_i" id="segment12_i_vectory" guid="97666AC04ABEF24B823B571CBA3B1469"/>
+    <subtract type="real" rhs="segment01_i_vectory" id="minus_segment01_i_vectory" guid="4D20B059F259211ACC6E743D8CE1BA03">
+      <lhs>
+        <real value="0.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="segment12_i_vectory" id="minus_segment12_i_vectory" guid="173C799764C1E4B6BB1C54F8044466A2">
+      <lhs>
+        <real value="0.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <composite type="vector" x="minus_segment01_i_vectory" y="segment01_i_vectorx" id="segment01_j" guid="02A860BB43D81D6591E91F7C15550243"/>
+    <composite type="vector" x="minus_segment12_i_vectory" y="segment12_i_vectorx" id="segment12_j" guid="53FF68106F77D9B4163DEC9BDABEB07D"/>
+    <vector id="point0000">
+      <x>-2.3499999046</x>
+      <y>0.0666666701</y>
+    </vector>
+    <vector id="point0001">
+      <x>0.3166666627</x>
+      <y>1.1666666269</y>
+    </vector>
+    <vector id="point0002">
+      <x>3.1333334446</x>
+      <y>-0.8000000119</y>
+    </vector>
+    <vector id="point0003">
+      <x>-0.7333333492</x>
+      <y>-0.8333333135</y>
+    </vector>
+    <vector id="point0004">
+      <x>-2.7000000477</x>
+      <y>-0.6333333254</y>
+    </vector>
+    <subtract type="vector" lhs="point0000" rhs="window_midleft" id="point0000_window_translate" guid="CB8B69FC8E26716C54182ECD9F3DE591">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="point0001" rhs="window_midleft" id="point0001_window_translate" guid="C2DD4D39291E416410F53D2327E25FCA">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="point0002" rhs="window_midleft" id="point0002_window_translate" guid="5580997A3A7B98B4901309FBCE3BC23B">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="point0003" rhs="window_midleft" id="point0003_window_translate" guid="DB28DAD459C362A5D35DD45B2BBC2A44">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="point0004" rhs="window_midleft" id="point0004_window_translate" guid="27D697E5D594D7DCCDA2AFC030849843">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <vectorx type="real" vector="point0000_window_translate" id="point0000_window_translate_x" guid="78C0A55EEA7201992B8D43D6D4A78808"/>
+    <vectory type="real" vector="point0000_window_translate" id="point0000_window_translate_y" guid="D7E10ED467AAD86388CF827177C1F70C"/>
+    <vectorx type="real" vector="point0001_window_translate" id="point0001_window_translate_x" guid="4F96F8F7645122F33C9467308532D8A2"/>
+    <vectory type="real" vector="point0001_window_translate" id="point0001_window_translate_y" guid="C7347F32006ECDAA17E9C4686962BD8C"/>
+    <vectorx type="real" vector="point0002_window_translate" id="point0002_window_translate_x" guid="14ED5E11F18199E86F2DAEB9173E3E2F"/>
+    <vectory type="real" vector="point0002_window_translate" id="point0002_window_translate_y" guid="B30F9FBD4AF89A68811B8F27B3C3EBEC"/>
+    <vectorx type="real" vector="point0003_window_translate" id="point0003_window_translate_x" guid="1DD75B2AEF84EC61EDDB5472B5FD9F17"/>
+    <vectory type="real" vector="point0003_window_translate" id="point0003_window_translate_y" guid="3EF886E45FA6FDEDF7A9C1A430B834FA"/>
+    <vectorx type="real" vector="point0004_window_translate" id="point0004_window_translate_x" guid="5487CBB74E238E6C9D84B51693AE98F1"/>
+    <vectory type="real" vector="point0004_window_translate" id="point0004_window_translate_y" guid="1351F9A72A33D72F6EE02A4FD6E382A5"/>
+    <scale type="real" link="point0000_window_translate_x" scalar="window_span_x_reciprocal" id="point0000_window_translate_x_scale" guid="1FB03BE8B02B21FF591DF684993B8DE3"/>
+    <scale type="real" link="point0001_window_translate_x" scalar="window_span_x_reciprocal" id="point0001_window_translate_x_scale" guid="B96C470E9077C8DEDEF682D92CC8CAEC"/>
+    <scale type="real" link="point0002_window_translate_x" scalar="window_span_x_reciprocal" id="point0002_window_translate_x_scale" guid="1AD6A6CBAF318F62341377CB961E37C5"/>
+    <scale type="real" link="point0003_window_translate_x" scalar="window_span_x_reciprocal" id="point0003_window_translate_x_scale" guid="6CFDA54C5B54D0FF90E0707377C9362E"/>
+    <scale type="real" link="point0004_window_translate_x" scalar="window_span_x_reciprocal" id="point0004_window_translate_x_scale" guid="FC4B18C0673639549183C6D9F16AF65D"/>
+    <composite type="vector" x="point0000_window_translate_x_scale" y="point0000_window_translate_y" id="point0000_window" guid="DAA708093E7591338DC2E253EBBA12BB"/>
+    <composite type="vector" x="point0001_window_translate_x_scale" y="point0001_window_translate_y" id="point0001_window" guid="6EE314A49F22682462120CA2D7569363"/>
+    <composite type="vector" x="point0002_window_translate_x_scale" y="point0002_window_translate_y" id="point0002_window" guid="F7FDD6068C02C691EF6159D95AA58318"/>
+    <composite type="vector" x="point0003_window_translate_x_scale" y="point0003_window_translate_y" id="point0003_window" guid="AC907655E10F50795EF55C1A2C9642A6"/>
+    <composite type="vector" x="point0004_window_translate_x_scale" y="point0004_window_translate_y" id="point0004_window" guid="D8E1CC78A191935FFAEB1832E62F2C9E"/>
+    <vectorx type="real" vector="point0000_window" id="point0000_window_x" guid="95C51704FD52818AD8E18801BB9E8784"/>
+    <vectory type="real" vector="point0000_window" id="point0000_window_y" guid="8A789D8FB69516D4E0F478302E3C2B4A"/>
+    <vectorx type="real" vector="point0001_window" id="point0001_window_x" guid="49C5B32106EC28FD965B2B4125E1023D"/>
+    <vectory type="real" vector="point0001_window" id="point0001_window_y" guid="BE23F8D2F9B2FC7826D235E2C15247D5"/>
+    <vectorx type="real" vector="point0002_window" id="point0002_window_x" guid="1094E462F03E1EA298287E9A131F4D87"/>
+    <vectory type="real" vector="point0002_window" id="point0002_window_y" guid="BC76F831B4465C8079897EFF0DF5F2FD"/>
+    <vectorx type="real" vector="point0003_window" id="point0003_window_x" guid="2AF35BBF5D8CB839255D43A762FD52B2"/>
+    <vectory type="real" vector="point0003_window" id="point0003_window_y" guid="328328B5C6B49BD62F87C7AB4F4BBED9"/>
+    <vectorx type="real" vector="point0004_window" id="point0004_window_x" guid="8878EC4E12A9BFE76556F90B9A7CDD2D"/>
+    <vectory type="real" vector="point0004_window" id="point0004_window_y" guid="E23F5DBFAB7FA66E46005624C119C3F0"/>
+    <scale type="real" link="point0000_window_x" scalar="P1_minus_P0_length" id="segment01_point0000_window_x_scale" guid="C933DE8FD1C459643122EDA4160D76F6"/>
+    <scale type="real" link="point0001_window_x" scalar="P1_minus_P0_length" id="segment01_point0001_window_x_scale" guid="9A2B32A4C85CE451FFD9F7160D238CB1"/>
+    <scale type="real" link="point0002_window_x" scalar="P1_minus_P0_length" id="segment01_point0002_window_x_scale" guid="E2695D2033C7C39E9B65035F394A3AAD"/>
+    <scale type="real" link="point0003_window_x" scalar="P1_minus_P0_length" id="segment01_point0003_window_x_scale" guid="EFBB6B70AD8F7B3E48B80996BB521B13"/>
+    <scale type="real" link="point0004_window_x" scalar="P1_minus_P0_length" id="segment01_point0004_window_x_scale" guid="F3AC90293C6FF8FEAD6B704D9E3E3040"/>
+    <scale type="vector" link="segment01_i" scalar="segment01_point0000_window_x_scale" id="segment01_point0000_i" guid="0F029126466DB83ABBCA4DC5E3FD3E56"/>
+    <scale type="vector" link="segment01_i" scalar="segment01_point0001_window_x_scale" id="segment01_point0001_i" guid="2B8018A87A50DB62E23BA2BE84E3A6D8"/>
+    <scale type="vector" link="segment01_i" scalar="segment01_point0002_window_x_scale" id="segment01_point0002_i" guid="9703F01EF4AB15CE49DB5ACD9C221A9F"/>
+    <scale type="vector" link="segment01_i" scalar="segment01_point0003_window_x_scale" id="segment01_point0003_i" guid="8546F71D9A792880A7987124052F9161"/>
+    <scale type="vector" link="segment01_i" scalar="segment01_point0004_window_x_scale" id="segment01_point0004_i" guid="5950BAC9A513232194386AAEE929850F"/>
+    <scale type="vector" link="segment01_j" scalar="point0000_window_y" id="segment01_point0000_j" guid="ACF37C3E70F96538C0F155AC3CF14CFD"/>
+    <scale type="vector" link="segment01_j" scalar="point0001_window_y" id="segment01_point0001_j" guid="425E5A00AAB9595131F7695DAE110733"/>
+    <scale type="vector" link="segment01_j" scalar="point0002_window_y" id="segment01_point0002_j" guid="B35A5FE3746A137132D18D5681682428"/>
+    <scale type="vector" link="segment01_j" scalar="point0003_window_y" id="segment01_point0003_j" guid="032E61F0B3DF4B85C134AB2B1E2FA5FC"/>
+    <scale type="vector" link="segment01_j" scalar="point0004_window_y" id="segment01_point0004_j" guid="E9DC69626EB5663214EF19198DC415DC"/>
+    <add type="vector" lhs="segment01_point0000_i" rhs="segment01_point0000_j" id="segment01_point0000_i_plus_j" guid="05A419EE592846B42B45934E694D1AC0">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0001_i" rhs="segment01_point0001_j" id="segment01_point0001_i_plus_j" guid="36823C53A28B842E9B36CB4A300CFAF6">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0002_i" rhs="segment01_point0002_j" id="segment01_point0002_i_plus_j" guid="B52DFA20C25D7BB10094909C30FCED1D">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0003_i" rhs="segment01_point0003_j" id="segment01_point0003_i_plus_j" guid="D996856269424FBD488EC18DB8979BD5">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0004_i" rhs="segment01_point0004_j" id="segment01_point0004_i_plus_j" guid="D6D12D6E17B3C098F3CED27F53CAE96B">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P0" rhs="segment01_point0000_i_plus_j" id="segment01_point0000" guid="9071E2A557C5490121FBDD8ABD091FE8">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P0" rhs="segment01_point0001_i_plus_j" id="segment01_point0001" guid="90E9A610373A0E1813D1CB134DD1D379">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P0" rhs="segment01_point0002_i_plus_j" id="segment01_point0002" guid="AB3B0FBCFDCA0F63BB9E2D586E94AE5F">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P0" rhs="segment01_point0003_i_plus_j" id="segment01_point0003" guid="D95B8EDEF6AEE50994BF8640C64B6898">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P0" rhs="segment01_point0004_i_plus_j" id="segment01_point0004" guid="27EC2A0C5748241259C7DD2E6AE3A273">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <scale type="real" link="point0000_window_x" scalar="P2_minus_P1_length" id="segment12_point0000_window_x_scale" guid="4C41BA11F4340A2CAEE6ECFB90539707"/>
+    <scale type="real" link="point0001_window_x" scalar="P2_minus_P1_length" id="segment12_point0001_window_x_scale" guid="07FE52C47AC82A9D6D662EF2F5D95FDB"/>
+    <scale type="real" link="point0002_window_x" scalar="P2_minus_P1_length" id="segment12_point0002_window_x_scale" guid="BEAD0D2FAC370FEF8F26716A3A937B13"/>
+    <scale type="real" link="point0003_window_x" scalar="P2_minus_P1_length" id="segment12_point0003_window_x_scale" guid="6B7F9CA7B837019FB70D89E35C58286C"/>
+    <scale type="real" link="point0004_window_x" scalar="P2_minus_P1_length" id="segment12_point0004_window_x_scale" guid="3FD2327FA52FDAC173175F5E2BB6C3AE"/>
+    <scale type="vector" link="segment12_i" scalar="segment12_point0000_window_x_scale" id="segment12_point0000_i" guid="1B026B980961BFDB662A20DD690D4D17"/>
+    <scale type="vector" link="segment12_i" scalar="segment12_point0001_window_x_scale" id="segment12_point0001_i" guid="D984F6969C10FF99C01B0C1713F238F7"/>
+    <scale type="vector" link="segment12_i" scalar="segment12_point0002_window_x_scale" id="segment12_point0002_i" guid="6EBC1C259EDAC3A9623A052EA60D005C"/>
+    <scale type="vector" link="segment12_i" scalar="segment12_point0003_window_x_scale" id="segment12_point0003_i" guid="AE16A261C3CB163E8D510117833BA7AE"/>
+    <scale type="vector" link="segment12_i" scalar="segment12_point0004_window_x_scale" id="segment12_point0004_i" guid="2B3F5A7F2AF9C4A8CD61D6A4144DE7CA"/>
+    <scale type="vector" link="segment12_j" scalar="point0000_window_y" id="segment12_point0000_j" guid="A0BB59FE16CA87E0CAC64CF9D7A789E1"/>
+    <scale type="vector" link="segment12_j" scalar="point0001_window_y" id="segment12_point0001_j" guid="5C1EA89E775D3EA689F60B939BA1694F"/>
+    <scale type="vector" link="segment12_j" scalar="point0002_window_y" id="segment12_point0002_j" guid="55269A8CF9F1CEA50E36ED08AE6A58DE"/>
+    <scale type="vector" link="segment12_j" scalar="point0003_window_y" id="segment12_point0003_j" guid="299DE4F440086CDC38942A8EBA20B003"/>
+    <scale type="vector" link="segment12_j" scalar="point0004_window_y" id="segment12_point0004_j" guid="E63993B9DC9DF5BD1DF6AA20133AB526"/>
+    <add type="vector" lhs="segment12_point0000_i" rhs="segment12_point0000_j" id="segment12_point0000_i_plus_j" guid="90BEB0698873D2F7DF8A93D8B5233B7C">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0001_i" rhs="segment12_point0001_j" id="segment12_point0001_i_plus_j" guid="4B34B6BE81CB103812D39318C85169B2">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0002_i" rhs="segment12_point0002_j" id="segment12_point0002_i_plus_j" guid="89A3A3298D146F5CB6DEF38FD72CF6BC">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0003_i" rhs="segment12_point0003_j" id="segment12_point0003_i_plus_j" guid="E14C882BF51D260B69A64514DA25CE91">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0004_i" rhs="segment12_point0004_j" id="segment12_point0004_i_plus_j" guid="0005F854D3E5A78C2ADA9B96119618C6">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P1" rhs="segment12_point0000_i_plus_j" id="segment12_point0000" guid="8ECE04C662660B8D70BD0F8B352A317D">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P1" rhs="segment12_point0001_i_plus_j" id="segment12_point0001" guid="E4FC2791BC1920DF8305981421B8680B">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P1" rhs="segment12_point0002_i_plus_j" id="segment12_point0002" guid="08D13B3792E22E876D071A594BFC2318">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P1" rhs="segment12_point0003_i_plus_j" id="segment12_point0003" guid="577068684838FD0EF0E8B438AECAAA12">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="P1" rhs="segment12_point0004_i_plus_j" id="segment12_point0004" guid="5A9D37F6877E4951AC4D10B73CEDBF31">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0000" rhs="segment01_point0001" id="segment01_midpoint0000" guid="A4BABA317B3ED9E8F7E373684E25CF54">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0001" rhs="segment01_point0002" id="segment01_midpoint0001" guid="A71A009B04BDA43243F7B13F1207A3B9">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0002" rhs="segment01_point0003" id="segment01_midpoint0002" guid="63B0BBA40BC8293EA57E17EFBF7C4690">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0003" rhs="segment01_point0004" id="segment01_midpoint0003" guid="5760328EBB90D6FA030D5EFE0245BF4F">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment01_point0004" rhs="segment01_point0000" id="segment01_midpoint0004" guid="41AC764E150964CFBCA99CA9AF373D9E">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0000" rhs="segment12_point0001" id="segment12_midpoint0000" guid="FCB86D57BCC96DC21D7731F9EFFC62BC">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0001" rhs="segment12_point0002" id="segment12_midpoint0001" guid="3F85B689F5AAEAD34F4CBBAE3597601F">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0002" rhs="segment12_point0003" id="segment12_midpoint0002" guid="680832AFC1960681023CE123A892365F">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0003" rhs="segment12_point0004" id="segment12_midpoint0003" guid="76845FFE6CB5433328B6C99A57A726EA">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="segment12_point0004" rhs="segment12_point0000" id="segment12_midpoint0004" guid="987A53E80247247042C6415727A542E8">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <reference type="real" link="point0000_window_x" id="curve0000_t_start" guid="43BF252A888016A69210573AC4CFE148"/>
+    <reference type="real" link="point0001_window_x" id="curve0001_t_start" guid="7A02BFEFC6FE481BAB6688673EA51F9E"/>
+    <reference type="real" link="point0002_window_x" id="curve0002_t_start" guid="BD15FA977837DBEEAED38123D2A966A0"/>
+    <reference type="real" link="point0003_window_x" id="curve0003_t_start" guid="31EE47BBDB75B062C1C25BA4FE8F738F"/>
+    <reference type="real" link="point0004_window_x" id="curve0004_t_start" guid="32203187446378F580F2F3B05A343F88"/>
+    <subtract type="real" rhs="curve0000_t_start" id="curve0000_one_minus_t_start" guid="7DF8172AAD776423152003458320CCE4">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0001_t_start" id="curve0001_one_minus_t_start" guid="06FEE2CE3B088CFF5CA4446D9FA5CB63">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0002_t_start" id="curve0002_one_minus_t_start" guid="89367B282A6CAFB3622C8D15BDF30431">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0003_t_start" id="curve0003_one_minus_t_start" guid="F96E861E481D97CD8469B45C300D98A7">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0004_t_start" id="curve0004_one_minus_t_start" guid="7E1C4E307C50E05D0B721B2EA5230827">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <reference type="real" link="point0001_window_x" id="curve0000_t_end" guid="6A76497D9009A30BC5985CA878B9E441"/>
+    <reference type="real" link="point0002_window_x" id="curve0001_t_end" guid="5C9FD4DF5B228FF36B0BA5F1F2778A1E"/>
+    <reference type="real" link="point0003_window_x" id="curve0002_t_end" guid="0C1EB24B1DD348D4832E066F86AF0841"/>
+    <reference type="real" link="point0004_window_x" id="curve0003_t_end" guid="80EC17795575954FE7AA09A1F4652B31"/>
+    <reference type="real" link="point0000_window_x" id="curve0004_t_end" guid="61B9412D0650D1D3CB124F61027FDC9E"/>
+    <subtract type="real" rhs="curve0000_t_end" id="curve0000_one_minus_t_end" guid="6574D79740F6E57B844FF07C2C194AFE">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0001_t_end" id="curve0001_one_minus_t_end" guid="10B1E543C17E98B6C47A8A2A39D28BE4">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0002_t_end" id="curve0002_one_minus_t_end" guid="062321463446302F00373FB5EEB14540">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0003_t_end" id="curve0003_one_minus_t_end" guid="5DC91FF95BEB5BE257CD5C9F12C35548">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0004_t_end" id="curve0004_one_minus_t_end" guid="C578EF46BCA2403AA13330D21AAF5B38">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <add type="real" lhs="point0000_window_x" rhs="point0001_window_x" id="curve0000_t_mid" guid="17B788A18D2DDB0D5C4C9A8A743BF717">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="real" lhs="point0001_window_x" rhs="point0002_window_x" id="curve0001_t_mid" guid="FCBDF8EF071E2E445710E0E957306832">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="real" lhs="point0002_window_x" rhs="point0003_window_x" id="curve0002_t_mid" guid="5704A1EFCCD440E6838472CBFEDF7970">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="real" lhs="point0003_window_x" rhs="point0004_window_x" id="curve0003_t_mid" guid="E80DFC11478618FC4A1F3A26332F1801">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <add type="real" lhs="point0004_window_x" rhs="point0000_window_x" id="curve0004_t_mid" guid="2DADC1339F6B9E43ABD41EDF815BFADB">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </add>
+    <subtract type="real" rhs="curve0000_t_mid" id="curve0000_one_minus_t_mid" guid="0AA708251729CAF3C1292F366F16F77E">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0001_t_mid" id="curve0001_one_minus_t_mid" guid="B6754489C7F7E4D85D58C3FF91ABE640">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0002_t_mid" id="curve0002_one_minus_t_mid" guid="D128BF459DE353F69CB3817CCAF80CF0">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0003_t_mid" id="curve0003_one_minus_t_mid" guid="0C615D60D54B75AE3F98C8D66FFCFFE2">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="real" rhs="curve0004_t_mid" id="curve0004_one_minus_t_mid" guid="EFBABBFA817F76D61BF9C9821966A114">
+      <lhs>
+        <real value="1.0000000000"/>
+      </lhs>
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </subtract>
+    <scale type="vector" link="segment01_point0000" scalar="curve0000_one_minus_t_start" id="curve0000_startpoint_lhs" guid="766C34CA5542E496BAFB086B04E94843"/>
+    <scale type="vector" link="segment01_point0001" scalar="curve0001_one_minus_t_start" id="curve0001_startpoint_lhs" guid="38B842C652101B9BDBCB2FBF266EEBCB"/>
+    <scale type="vector" link="segment01_point0002" scalar="curve0002_one_minus_t_start" id="curve0002_startpoint_lhs" guid="47C2D7B7D387CBF0B9E587A050110948"/>
+    <scale type="vector" link="segment01_point0003" scalar="curve0003_one_minus_t_start" id="curve0003_startpoint_lhs" guid="127C76F648DBE4354A794D3424CB02BE"/>
+    <scale type="vector" link="segment01_point0004" scalar="curve0004_one_minus_t_start" id="curve0004_startpoint_lhs" guid="1DB5747686AD2E56B59A5B7E2D49C850"/>
+    <scale type="vector" link="segment12_point0000" scalar="curve0000_t_start" id="curve0000_startpoint_rhs" guid="F0777F25C5EC850F5F110E3BF76B5C68"/>
+    <scale type="vector" link="segment12_point0001" scalar="curve0001_t_start" id="curve0001_startpoint_rhs" guid="D2E9E084D0739BF58A601D55E2258852"/>
+    <scale type="vector" link="segment12_point0002" scalar="curve0002_t_start" id="curve0002_startpoint_rhs" guid="5BDD4A1F7E95ECB721E02467DCBD8EB8"/>
+    <scale type="vector" link="segment12_point0003" scalar="curve0003_t_start" id="curve0003_startpoint_rhs" guid="F2910DCE7CE052DE0C9BF8B6529F764D"/>
+    <scale type="vector" link="segment12_point0004" scalar="curve0004_t_start" id="curve0004_startpoint_rhs" guid="F23FAC959A0B088B34D3EE1ECA8025C4"/>
+    <add type="vector" lhs="curve0000_startpoint_lhs" rhs="curve0000_startpoint_rhs" id="curve0000_startpoint" guid="B10FF9251395A290571918377280C560">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0001_startpoint_lhs" rhs="curve0001_startpoint_rhs" id="curve0001_startpoint" guid="BB18122A21F1AF41424EA138B4283B5A">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0002_startpoint_lhs" rhs="curve0002_startpoint_rhs" id="curve0002_startpoint" guid="DE5D7722B0AF7B9032303846B7A837CA">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0003_startpoint_lhs" rhs="curve0003_startpoint_rhs" id="curve0003_startpoint" guid="03324E134F484C0C7F43B896BC9BCCC8">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0004_startpoint_lhs" rhs="curve0004_startpoint_rhs" id="curve0004_startpoint" guid="E8EA9D0827FC71CD48345C4ED1CB0E29">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <scale type="vector" link="segment01_point0001" scalar="curve0000_one_minus_t_end" id="curve0000_endpoint_lhs" guid="0327D23F832C975A47F918AE84304FEE"/>
+    <scale type="vector" link="segment01_point0002" scalar="curve0001_one_minus_t_end" id="curve0001_endpoint_lhs" guid="2BC0B99FDC35CD7C23D7FCFC56857916"/>
+    <scale type="vector" link="segment01_point0003" scalar="curve0002_one_minus_t_end" id="curve0002_endpoint_lhs" guid="32CE1A4924FDF2E8837F9ED70F05155D"/>
+    <scale type="vector" link="segment01_point0004" scalar="curve0003_one_minus_t_end" id="curve0003_endpoint_lhs" guid="5DD480F1F8C1E14EC02921BFBF68E04F"/>
+    <scale type="vector" link="segment01_point0000" scalar="curve0004_one_minus_t_end" id="curve0004_endpoint_lhs" guid="A50062F44344A478B092584A0DBF11F5"/>
+    <scale type="vector" link="segment12_point0001" scalar="curve0000_t_end" id="curve0000_endpoint_rhs" guid="DE1D95840D6266ED4610D42C532324F4"/>
+    <scale type="vector" link="segment12_point0002" scalar="curve0001_t_end" id="curve0001_endpoint_rhs" guid="B411087FCF9B35B0407F5305A88826AD"/>
+    <scale type="vector" link="segment12_point0003" scalar="curve0002_t_end" id="curve0002_endpoint_rhs" guid="AEFF25742E901F3873F72E702483D1BD"/>
+    <scale type="vector" link="segment12_point0004" scalar="curve0003_t_end" id="curve0003_endpoint_rhs" guid="94D407F0496FA838B79C0E708841105C"/>
+    <scale type="vector" link="segment12_point0000" scalar="curve0004_t_end" id="curve0004_endpoint_rhs" guid="2BCB58370F22634E5BFC548E1DA26018"/>
+    <add type="vector" lhs="curve0000_endpoint_lhs" rhs="curve0000_endpoint_rhs" id="curve0000_endpoint" guid="38FC4D150FA7C61EB99DEEC8039EBB51">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0001_endpoint_lhs" rhs="curve0001_endpoint_rhs" id="curve0001_endpoint" guid="20CBD5B9AB9ACCD24B486973D029DFBC">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0002_endpoint_lhs" rhs="curve0002_endpoint_rhs" id="curve0002_endpoint" guid="2B65FCC2A539B63103399C04B18678B2">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0003_endpoint_lhs" rhs="curve0003_endpoint_rhs" id="curve0003_endpoint" guid="54DD35BAD3738125607D954E6B9F02EC">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0004_endpoint_lhs" rhs="curve0004_endpoint_rhs" id="curve0004_endpoint" guid="AB967CF027C3597AA1AAE8C6EFC99787">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <scale type="vector" link="segment01_midpoint0000" scalar="curve0000_one_minus_t_mid" id="curve0000_midpoint_lhs" guid="ED23447286C28FF14D0DBA4F4EE06524"/>
+    <scale type="vector" link="segment01_midpoint0001" scalar="curve0001_one_minus_t_mid" id="curve0001_midpoint_lhs" guid="600E4BD43F491FDE5F6AA1F36D07CB43"/>
+    <scale type="vector" link="segment01_midpoint0002" scalar="curve0002_one_minus_t_mid" id="curve0002_midpoint_lhs" guid="9396E736F3937D08E7B29708679A4A91"/>
+    <scale type="vector" link="segment01_midpoint0003" scalar="curve0003_one_minus_t_mid" id="curve0003_midpoint_lhs" guid="BA9EB694DB123C0D20ED3D55D7A03CAC"/>
+    <scale type="vector" link="segment01_midpoint0004" scalar="curve0004_one_minus_t_mid" id="curve0004_midpoint_lhs" guid="63D3F09F43A9E40FE7C69C795883C1DD"/>
+    <scale type="vector" link="segment12_midpoint0000" scalar="curve0000_t_mid" id="curve0000_midpoint_rhs" guid="D421C9BFE73A45CD1E166CD9E7A7FE78"/>
+    <scale type="vector" link="segment12_midpoint0001" scalar="curve0001_t_mid" id="curve0001_midpoint_rhs" guid="6F8D0B1CDC00B93C3F5FACE3EE51A527"/>
+    <scale type="vector" link="segment12_midpoint0002" scalar="curve0002_t_mid" id="curve0002_midpoint_rhs" guid="9ACA4CD91FDA4B6049F2CA3E8361FB9E"/>
+    <scale type="vector" link="segment12_midpoint0003" scalar="curve0003_t_mid" id="curve0003_midpoint_rhs" guid="D2F7E08483FEAB9E94E91B1C5481282E"/>
+    <scale type="vector" link="segment12_midpoint0004" scalar="curve0004_t_mid" id="curve0004_midpoint_rhs" guid="4B2DBFE0EBB7CF04FB26E17E07934CBC"/>
+    <add type="vector" lhs="curve0000_midpoint_lhs" rhs="curve0000_midpoint_rhs" id="curve0000_midpoint" guid="7F64EB05D94FBCDDF70244F005A78A82">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0001_midpoint_lhs" rhs="curve0001_midpoint_rhs" id="curve0001_midpoint" guid="14A604E17928AB7F8F1653DC7A0C3768">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0002_midpoint_lhs" rhs="curve0002_midpoint_rhs" id="curve0002_midpoint" guid="B76135BB673B5923C97B5961DA16BA71">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0003_midpoint_lhs" rhs="curve0003_midpoint_rhs" id="curve0003_midpoint" guid="C308503E3D9C1B61FA5D9CA1AC4E8352">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0004_midpoint_lhs" rhs="curve0004_midpoint_rhs" id="curve0004_midpoint" guid="BF9E8489217C0AFF12AAC23CC5C9774C">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <scale type="vector" link="curve0000_midpoint" id="curve0000_controlpoint_lhs" guid="16050CFB1EBCB0344F2E69D77AE67DC5">
+      <scalar>
+        <real value="4.0000000000"/>
+      </scalar>
+    </scale>
+    <scale type="vector" link="curve0001_midpoint" id="curve0001_controlpoint_lhs" guid="F202C7042BF6D308937E70084DCD803C">
+      <scalar>
+        <real value="4.0000000000"/>
+      </scalar>
+    </scale>
+    <scale type="vector" link="curve0002_midpoint" id="curve0002_controlpoint_lhs" guid="07E685A0DE6783B1C628CB1EA09D7780">
+      <scalar>
+        <real value="4.0000000000"/>
+      </scalar>
+    </scale>
+    <scale type="vector" link="curve0003_midpoint" id="curve0003_controlpoint_lhs" guid="62D5FFD25A661197E3C8B2AC23A8F598">
+      <scalar>
+        <real value="4.0000000000"/>
+      </scalar>
+    </scale>
+    <scale type="vector" link="curve0004_midpoint" id="curve0004_controlpoint_lhs" guid="3EB224ED86AA9A28FBACAE030546FF5C">
+      <scalar>
+        <real value="4.0000000000"/>
+      </scalar>
+    </scale>
+    <add type="vector" lhs="curve0000_startpoint" rhs="curve0000_endpoint" id="curve0000_controlpoint_rhs" guid="CC2F4C6068E7A103B2689036A401C229">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0001_startpoint" rhs="curve0001_endpoint" id="curve0001_controlpoint_rhs" guid="1A80E53B757308CF4C027AC8FC7930F7">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0002_startpoint" rhs="curve0002_endpoint" id="curve0002_controlpoint_rhs" guid="B60907465B228404C7A632C119003926">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0003_startpoint" rhs="curve0003_endpoint" id="curve0003_controlpoint_rhs" guid="A97B58045055336927AA726284EFE5B4">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <add type="vector" lhs="curve0004_startpoint" rhs="curve0004_endpoint" id="curve0004_controlpoint_rhs" guid="3C89870D1509E5F3D3F2F9C177F21E70">
+      <scalar>
+        <real value="1.0000000000"/>
+      </scalar>
+    </add>
+    <subtract type="vector" lhs="curve0000_controlpoint_lhs" rhs="curve0000_controlpoint_rhs" id="curve0000_controlpoint" guid="B998220D3D30BB43490C774ECA235061">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0001_controlpoint_lhs" rhs="curve0001_controlpoint_rhs" id="curve0001_controlpoint" guid="49C9DF2BB6621400C394633E21B6C85E">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0002_controlpoint_lhs" rhs="curve0002_controlpoint_rhs" id="curve0002_controlpoint" guid="C0F00BAF71F900B0209F653623BD08CE">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0003_controlpoint_lhs" rhs="curve0003_controlpoint_rhs" id="curve0003_controlpoint" guid="6DD03D294F35869A72F38A74E3945208">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0004_controlpoint_lhs" rhs="curve0004_controlpoint_rhs" id="curve0004_controlpoint" guid="EFCCE164B07B018D8A94D340948D1C1C">
+      <scalar>
+        <real value="0.5000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0000_startpoint" rhs="curve0004_controlpoint" id="curve0000_tangent1" guid="F0D6839C2AE45859D490659B37BDDC47">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0000_controlpoint" rhs="curve0000_startpoint" id="curve0000_tangent2" guid="1C030AE67A9696640B74D67F8CB8ACA2">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0001_startpoint" rhs="curve0000_controlpoint" id="curve0001_tangent1" guid="D2E4690B89D5229ED4AB440F425414F3">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0001_controlpoint" rhs="curve0001_startpoint" id="curve0001_tangent2" guid="EFED94AF221742B563843EEE26E503C8">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0002_startpoint" rhs="curve0001_controlpoint" id="curve0002_tangent1" guid="BA10A8E1E77365A88E14D7B955E153DA">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0002_controlpoint" rhs="curve0002_startpoint" id="curve0002_tangent2" guid="A3626829DCD148B7856FF69B6ABC1D27">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0003_startpoint" rhs="curve0002_controlpoint" id="curve0003_tangent1" guid="1274A7D403AFA048E6BB862BAECC1B97">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0003_controlpoint" rhs="curve0003_startpoint" id="curve0003_tangent2" guid="38BAF9E794B454BA219C06094B6AE7A7">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0004_startpoint" rhs="curve0003_controlpoint" id="curve0004_tangent1" guid="EC27296B9A8077B52727D84277227CAF">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <subtract type="vector" lhs="curve0004_controlpoint" rhs="curve0004_startpoint" id="curve0004_tangent2" guid="6BDE3881A7649FEF320A3328E86E0407">
+      <scalar>
+        <real value="2.0000000000"/>
+      </scalar>
+    </subtract>
+    <vector id="test">
+      <x>0.0000000000</x>
+      <y>0.0000000000</y>
+    </vector>
+  </defs>
+  <layer type="outline" active="true" version="0.2" desc="NewSpline004 Outline">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.000000</r>
+        <g>0.000000</g>
+        <b>0.000000</b>
+        <a>0.750000</a>
+      </color>
+    </param>
+    <param name="origin" use="test"/>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="bline">
+      <bline type="bline_point" loop="true">
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0000">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0001">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0002">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0003">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0004">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+      </bline>
+    </param>
+    <param name="width">
+      <real value="0.0166666672"/>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="sharp_cusps">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[0]">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[1]">
+      <bool value="true"/>
+    </param>
+    <param name="loopyness">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="homogeneous_width">
+      <bool value="true"/>
+    </param>
+  </layer>
+  <layer type="rectangle" active="true" version="0.2" desc="Window">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.000000</r>
+        <g>0.000000</g>
+        <b>0.000000</b>
+        <a>0.500000</a>
+      </color>
+    </param>
+    <param name="point1" use="window_botleft"/>
+    <param name="point2" use="window_topright"/>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+  </layer>
+  <layer type="outline" active="true" version="0.2" desc="ControlBezier">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.000000</r>
+        <g>0.000000</g>
+        <b>0.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>0.0000000000</x>
+        <y>0.0000000000</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="bline">
+      <bline type="bline_point" loop="false">
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="P0">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="P1">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="P2">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+      </bline>
+    </param>
+    <param name="width">
+      <real value="0.0500000000"/>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="sharp_cusps">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[0]">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[1]">
+      <bool value="true"/>
+    </param>
+    <param name="loopyness">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="homogeneous_width">
+      <bool value="true"/>
+    </param>
+  </layer>
+  <layer type="outline" active="false" version="0.2" desc="Segment01">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.000000</r>
+        <g>0.000000</g>
+        <b>0.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>0.0000000000</x>
+        <y>0.0000000000</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="bline">
+      <bline type="bline_point" loop="true">
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment01_point0000">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment01_point0001">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment01_point0002">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment01_point0003">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment01_point0004">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+      </bline>
+    </param>
+    <param name="width">
+      <real value="0.0500000000"/>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="sharp_cusps">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[0]">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[1]">
+      <bool value="true"/>
+    </param>
+    <param name="loopyness">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="homogeneous_width">
+      <bool value="true"/>
+    </param>
+  </layer>
+  <layer type="outline" active="false" version="0.2" desc="Segment12">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.000000</r>
+        <g>0.000000</g>
+        <b>0.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>0.0000000000</x>
+        <y>0.0000000000</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="bline">
+      <bline type="bline_point" loop="true">
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment12_point0000">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment12_point0001">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment12_point0002">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment12_point0003">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="segment12_point0004">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+      </bline>
+    </param>
+    <param name="width">
+      <real value="0.0500000000"/>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="sharp_cusps">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[0]">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[1]">
+      <bool value="true"/>
+    </param>
+    <param name="loopyness">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="homogeneous_width">
+      <bool value="true"/>
+    </param>
+  </layer>
+  <layer type="outline" active="true" version="0.2" desc="Deformed">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.000000</r>
+        <g>0.000000</g>
+        <b>0.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>0.0000000000</x>
+        <y>0.0000000000</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="bline">
+      <bline type="bline_point" loop="true">
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="curve0000_startpoint" t1="curve0000_tangent1" t2="curve0000_tangent2">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="true"/>
+            </split>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="curve0001_startpoint" t1="curve0001_tangent1" t2="curve0001_tangent2">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="true"/>
+            </split>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="curve0002_startpoint" t1="curve0002_tangent1" t2="curve0002_tangent2">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="true"/>
+            </split>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="curve0003_startpoint" t1="curve0003_tangent1" t2="curve0003_tangent2">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="true"/>
+            </split>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="curve0004_startpoint" t1="curve0004_tangent1" t2="curve0004_tangent2">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="true"/>
+            </split>
+          </composite>
+        </entry>
+      </bline>
+    </param>
+    <param name="width">
+      <real value="0.0500000000"/>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="sharp_cusps">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[0]">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[1]">
+      <bool value="true"/>
+    </param>
+    <param name="loopyness">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="homogeneous_width">
+      <bool value="true"/>
+    </param>
+  </layer>
+  <layer type="outline" active="true" version="0.2" desc="NewSpline004 Outline">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.000000</r>
+        <g>0.000000</g>
+        <b>0.000000</b>
+        <a>0.750000</a>
+      </color>
+    </param>
+    <param name="origin" use="test"/>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="bline">
+      <bline type="bline_point" loop="true">
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0000">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0001">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0002">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0003">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+        <entry on="1s 12f, 2s">
+          <composite type="bline_point" point="point0004">
+            <width>
+              <real value="1.0000000000"/>
+            </width>
+            <origin>
+              <real value="0.5000000000"/>
+            </origin>
+            <split>
+              <bool value="false"/>
+            </split>
+            <t1>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t1>
+            <t2>
+              <radial_composite type="vector">
+                <radius>
+                  <real value="0.0000000000"/>
+                </radius>
+                <theta>
+                  <angle value="0.000000"/>
+                </theta>
+              </radial_composite>
+            </t2>
+          </composite>
+        </entry>
+      </bline>
+    </param>
+    <param name="width">
+      <real value="0.0166666672"/>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="sharp_cusps">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[0]">
+      <bool value="true"/>
+    </param>
+    <param name="round_tip[1]">
+      <bool value="true"/>
+    </param>
+    <param name="loopyness">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="homogeneous_width">
+      <bool value="true"/>
+    </param>
+  </layer>
+</canvas>

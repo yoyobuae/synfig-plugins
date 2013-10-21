@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <name>FreeForm Deform</name>
+   <exec>freeform-deform.py</exec>
+</plugin>
