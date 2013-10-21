@@ -215,12 +215,14 @@ def process(tree):
 	defs_usage = {}
 	pp = pprint.PrettyPrinter(indent=4)
 
+	firstlayer = next(et_iter(tree, tag='layer'))
+
 	# Append new layers to canvas
 	window_rectangle = xmldup_r(nodedict['layer_rectangle'])
 	control_outline = xmldup_r(nodedict['layer_outline'])
 	# segment01_outline = xmldup_r(nodedict['layer_outline'])
 	# segment12_outline = xmldup_r(nodedict['layer_outline'])
-	deformed_outline = xmldup_r(nodedict['layer_outline'])
+	deformed_outline = xmldup_r(firstlayer)
 	window_rectangle.set('desc', 'Window')
 	control_outline.set('desc', 'ControlBezier')
 	# segment01_outline.set('desc', 'Segment01')
@@ -330,7 +332,6 @@ def process(tree):
 	connectnode(segment12_j.find('y'), segment12_j, 'segment12_i_vectorx')
 
 	# Deformee exports
-	firstlayer = next(et_iter(tree, tag='layer'))
 	pointlist = getblinepoints(firstlayer)
 	pointlistenumerated = list(enumerate(pointlist))
 
@@ -684,7 +685,8 @@ def process(tree):
 		# segment12_outline_bline.append(segment12_entry)
 
 	deformed_outline_bline = findparam(deformed_outline, 'bline').find('use/bline')
-	deformed_outline_bline.remove(deformed_outline_bline.find('entry'))
+	for entry in deformed_outline_bline.findall('entry'):
+		deformed_outline_bline.remove(entry)
 
 	for p in enumerate(pointlist):
 		deformed_entry = xmldup_r(nodedict['bline_entry'])
